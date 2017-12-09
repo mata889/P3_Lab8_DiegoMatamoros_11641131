@@ -1,14 +1,22 @@
+
+
 #include "Boo.h"
 
-Boo::Boo(){
-	this->colorBoo="";
-}
-Boo::Boo(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string Vuelo,string pColorBoo):Flying(Poder, Nombre, Batallas, Experiencia, Hp,Def,Vel,Fuerza,Vuelo){
-	colorBoo=pColorBoo;
-}
-string Boo::getColorBoo(){
-	return colorBoo;
-}
-Boo::~Boo(){
+#include <iostream>
 
+using namespace std;
+
+Boo::Boo(){
+	this->color = " ";
+}
+
+Boo::Boo(string pColor,  string vuelo , string nombre, string poder,  int hp, int fuerza, double def, double vel):Flying(vuelo, nombre, poder, hp, fuerza, def, vel){
+	color = pColor;
+}
+
+string Boo::getColor(){
+	return color;
+}
+
+Boo::~Boo(){
 }

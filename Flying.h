@@ -1,18 +1,24 @@
 #ifndef FLYING_H
 #define FLYING_H
+
 #include "Minion.h"
 #include <string>
-#include <iostream>
-using namespace std;
 
-class Flying:public Minion{
-protected:
+
+
+class Flying : public Minion{
+private:
 	string vuelo;
+
 public:
 	Flying();
-	Flying(string,string,int,int,int,double,double,int,string);
+	Flying(string, string, string, int, int, double, double);
+
 
 	string getVuelo();
+
+	void setVuelo(string);
+
 	virtual ~Flying();
 
 };

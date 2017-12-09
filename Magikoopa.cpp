@@ -1,14 +1,22 @@
+#include "Minion.h"
+#include "Range.h"
 #include "Magikoopa.h"
 
+#include <iostream>
+
+using namespace std;
+
 Magikoopa::Magikoopa(){
-	this->colorTraje="";
+	this->color = " ";
 }
-Magikoopa::Magikoopa(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string rango,string pColorTraje):Range(Poder, Nombre, Batallas, Experiencia, Hp,Def,Vel,Fuerza,rango){
-	colorTraje=pColorTraje;
+
+Magikoopa::Magikoopa(string pColor,  string rango , string nombre, string poder,  int hp, int fuerza, double def, double vel):Range(rango, nombre, poder, hp, fuerza, def, vel){
+	color = pColor;
 }
-string Magikoopa::getColorTraje(){
-	return colorTraje;
+
+string Magikoopa::getColor(){
+	return color;
 }
+
 Magikoopa::~Magikoopa(){
-	
 }

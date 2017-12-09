@@ -1,13 +1,22 @@
+#include "Minion.h"
+#include "Melee.h"
 #include "Goomba.h"
-#include <string>
+
+#include <iostream>
+
+using namespace std;
 
 Goomba::Goomba(){
-	this->size="";
+	this->tamano = " ";
 }
-Goomba::Goomba(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string Intimidacion,string pSize):Melee(Poder, Nombre, Batallas, Experiencia, Hp,Def,Vel,Fuerza,Intimidacion){
-	size=pSize;
-	Poder="goomba";
-}
-Goomba::~Goomba(){
 
+Goomba::Goomba(string pTamano,  string intimidar , string nombre, string poder,  int hp, int fuerza, double def, double vel):Melee(intimidar, nombre, poder, hp, fuerza, def, vel){
+	tamano = pTamano;
+}
+
+string Goomba::getTamano(){
+	return tamano;
+}
+
+Goomba::~Goomba(){
 }

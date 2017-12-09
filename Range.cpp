@@ -1,14 +1,20 @@
 #include "Range.h"
 
+#include <iostream>
+
+using namespace std;
+
 Range::Range(){
-	this->rango="";
+	this->rango = " ";
 }
-Range::Range(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string pRango):Minion(nombre,poder,batallas,experiencia,hp,fuerza,def,vel){
-	rango=pRango;
+//nombre, poder, batalla, experiencia, hp, fuerza, def, vel
+Range::Range(string pRango, string nombre, string poder,  int hp, int fuerza, double def, double vel):Minion(nombre, poder, hp, fuerza, def, vel){
+	rango = pRango;
 }
+
 string Range::getRango(){
 	return rango;
 }
-Range::~Range(){
 
+Range::~Range(){
 }

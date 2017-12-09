@@ -1,18 +1,24 @@
 #ifndef MAGIKOOPA_H
 #define MAGIKOOPA_H
 
-#include "Range.h"
 #include <string>
-#include <iostream>
+#include "Range.h"
+
 using namespace std;
 
 class Magikoopa:public Range{
-protected:
-	string colorTraje;
+private:
+	string color;
+
 public:
+	Magikoopa(string, string, string, string, int,  int, double, double);
 	Magikoopa();
-	Magikoopa(string,string,int,int,int,double,double,int,string,string);
-	string getColorTraje();
+
+	string getColor();
+
+	void setColor(string);
+
 	virtual ~Magikoopa();
+
 };
 #endif

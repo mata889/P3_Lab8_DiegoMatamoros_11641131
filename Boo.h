@@ -1,17 +1,24 @@
 #ifndef BOO_H
 #define BOO_H
-#include "Flying.h"
+
 #include <string>
-#include <iostream>
+#include "Flying.h"
+
 using namespace std;
 
 class Boo:public Flying{
-protected:
-	string colorBoo;
+private:
+	string color;
+
 public:
+	Boo(string, string, string, string, int,  int, double, double);
 	Boo();
-	Boo(string,string,int,int,int,double,double,int,string,string);
-	string getColorBoo();
-	virtual~Boo();
+
+	string getColor();
+
+	void setColor(string);
+
+	virtual ~Boo();
+
 };
 #endif

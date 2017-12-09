@@ -1,19 +1,24 @@
 #ifndef PARATROOPA_H
 #define PARATROOPA_H
-#include "Flying.h"
+
 #include <string>
-#include <iostream>
+#include "Flying.h"
+
 using namespace std;
 
 class Paratroopa:public Flying{
-protected:
-	string colorCaparazon;
+private:
+	string color;
+
 public:
+	Paratroopa(string, string, string, string, int,  int, double, double);
 	Paratroopa();
-	Paratroopa(string,string,int,int,int,double,double,int,string,string);
 
-	string getColorCaparazon();
+	string getColor();
 
-	virtual~Paratroopa();
+	void setColor(string);
+
+	virtual ~Paratroopa();
+
 };
 #endif

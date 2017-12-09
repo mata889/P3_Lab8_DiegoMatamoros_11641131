@@ -1,15 +1,20 @@
 #include "Melee.h"
+#include "Minion.h"
+#include <iostream>
+
 using namespace std;
 
 Melee::Melee(){
-	this->intimidacion="";
+	this->intimidar = " ";
 }
-Melee::Melee(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string pIntimidacion):Minion(nombre,poder,batallas,experiencia,hp,fuerza,def,vel){
-	intimidacion=pIntimidacion;
+//nombre, poder, batalla, experiencia, hp, fuerza, def, vel
+Melee::Melee(string pIntimidar, string nombre, string poder, int hp, int fuerza, double def, double vel):Minion(nombre, poder, hp, fuerza, def, vel){
+	intimidar = pIntimidar;
 }
-string Melee::getIntimidacion(){
-	return intimidacion;
-}
-Melee::~Melee(){
 
+string Melee::getIntimidar(){
+	return intimidar;
+}
+
+Melee::~Melee(){
 }

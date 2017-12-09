@@ -1,14 +1,22 @@
+
+
 #include "Paratroopa.h"
 
-Paratroopa::Paratroopa(){
-	this->colorCaparazon="";
-}
-Paratroopa::Paratroopa(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string Vuelo,string pColorCaparazon):Flying(Poder, Nombre, Batallas, Experiencia, Hp,Def,Vel,Fuerza,Vuelo){
-	colorCaparazon=pColorCaparazon;
-}
-string Paratroopa::getColorCaparazon(){
-	return colorCaparazon;
-}
-Paratroopa::~Paratroopa(){
+#include <iostream>
 
+using namespace std;
+
+Paratroopa::Paratroopa(){
+	this->color = " ";
+}
+
+Paratroopa::Paratroopa(string pColor,  string vuelo , string nombre, string poder,  int hp, int fuerza, double def, double vel):Flying(vuelo, nombre, poder, hp, fuerza, def, vel){
+	color = pColor;
+}
+
+string Paratroopa::getColor(){
+	return color;
+}
+
+Paratroopa::~Paratroopa(){
 }

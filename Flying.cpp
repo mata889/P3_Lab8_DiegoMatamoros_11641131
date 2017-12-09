@@ -1,12 +1,20 @@
 #include "Flying.h"
-#include <string>
+
+#include <iostream>
+
+using namespace std;
 
 Flying::Flying(){
-	this->vuelo="";
+	this->vuelo = " ";
 }
-Flying::Flying(string Poder,string Nombre,int Batallas,int Experiencia,int Hp,double Def,double Vel,int Fuerza,string pVuelo):Minion(nombre,poder,batallas,experiencia,hp,fuerza,def,vel){
-	vuelo=pVuelo;
+//nombre, poder, batalla, experiencia, hp, fuerza, def, vel
+Flying::Flying(string pVuelo, string nombre, string poder, int hp, int fuerza, double def, double vel):Minion(nombre, poder, hp, fuerza, def, vel){
+	vuelo = pVuelo;
 }
+
+string Flying::getVuelo(){
+	return vuelo;
+}
+
 Flying::~Flying(){
-	
 }

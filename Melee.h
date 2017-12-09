@@ -3,17 +3,22 @@
 
 #include "Minion.h"
 #include <string>
-#include <iostream>
+
 using namespace std;
 
 class Melee:public Minion{
-protected:
-	string intimidacion;
-public:
-	Melee();
-	Melee(string,string,int,int,int,double,double,int,string);
+private:
+	string intimidar;
 
-	string getIntimidacion();
-	virtual~Melee();
+public:
+	Melee(string, string, string, int, int, double, double);
+	Melee();
+
+	string getIntimidar();
+
+	void setIntimidar(string);
+
+	virtual ~Melee();
+
 };
 #endif

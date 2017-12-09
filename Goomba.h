@@ -2,19 +2,23 @@
 #define GOOMBA_H
 
 #include <string>
-#include <iostream>
 #include "Melee.h"
+
 using namespace std;
 
 class Goomba:public Melee{
-protected:
-	string size;
+private:
+	string tamano;
+
 public:
+	Goomba(string, string, string, string, int,  int, double, double);
 	Goomba();
-	Goomba(string,string,int,int,int,double,double,int,string,string);
 
-	string getSize();
+	string getTamano();
 
-	virtual~Goomba();
+	void setTamano(string);
+
+	virtual ~Goomba();
+
 };
 #endif
